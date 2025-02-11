@@ -1,0 +1,64 @@
+/* Reset margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main content layout */
+.content {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Left Side - Image */
+.image-container {
+    flex: 1;
+    background: url('assets/images/7.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Right Side - Text */
+.text-container {
+    flex: 1;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.text-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    white-space: pre-line;
+    text-align: left;
+    max-width: 80%;
+}
+
+/* Next Page button */
+.next-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-button:hover {
+    background-color: #e63950;
+}

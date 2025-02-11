@@ -1,0 +1,368 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black; /* Default background */
+    overflow: hidden; /* Prevent scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Background image for Page 1 */
+body.page1::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;  
+    height: 800px;  
+    background: url('../assets/images/5.jpg') no-repeat center center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Ensuring text is white on Page 1 */
+body.page1 h1 {
+    color: white;
+}
+
+/* Background image for Page 2 is now removed, as we need an image on the left side */
+body.page2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* Container for text movement */
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh; 
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Page 2 Layout - Left Image, Right Text */
+.page2 .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Left Side - Image */
+.left-image {
+    width: 50%;
+    height: 100vh;
+    background: url('../assets/images/6.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Right Side - Typing Text */
+.right-text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: black; /* Keep black background */
+    text-align: left;
+}
+
+/* Typing effect text (Same as before, unchanged) */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    white-space: pre-line;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    text-align: left;
+    overflow: hidden;
+    color: whitesmoke; /* White text for both pages */
+}
+
+/* Floating Hearts (Page 1 Only) */
+.heart {
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    opacity: 0.8;
+    animation: floatUp 5s linear infinite;
+}
+
+/* Heart Floating Animation */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Next Page Button */
+.next-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-button:hover {
+    background-color: #e63950;
+}
+
+/* Background image for Page 3 */
+.page3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* Page 3 - Container Layout */
+.page3 .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Left Side - Image */
+.page3 .left-image {
+    width: 20%;
+    height: 100vh;
+    background: url('../assets/images/7.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Right Side - Text */
+.page3 .right-text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    text-align: left;
+}
+
+
+/* Page 4 Layout - Text on Left, Image on Right */
+.page4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* Container Layout */
+.page4 .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Left Side - Text */
+.page4 .left-text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    text-align: left;
+}
+
+/* Right Side - Image */
+.page4 .right-image {
+    width: 50%;
+    height: 100vh;
+    background: url('../assets/images/8.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Background image for Page 5 */
+/* Background image setup */
+/* Background image */
+body.page5 {
+    background: url('../assets/images/10.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Full-page container */
+.container {
+    width: 100vw;  /* Full width */
+    height: 100vh; /* Full height */
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling when text overflows */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Ensure text is small enough to fit */
+#typed-text {
+    font-size: 16px; /* Smaller text */
+    line-height: 1.3; 
+    white-space: pre-line;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+/* Full-screen layout */
+/* Page background */
+/* Background for Page 6 */
+body.page6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+}
+
+/* Page 6 - Container Layout */
+.page6 .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+}
+
+/* Left Side - Image (Slideshow) */
+/* Left Side - Image (Slideshow) */
+.page6 .left-image {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: black; /* Ensures black background */
+}
+
+/* Image inside the left container */
+.page6 .left-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures full image without cropping */
+    background-color: black; /* Extra safety to ensure black background */
+}
+
+/* Right Side - Typing Text */
+.page6 .right-text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    text-align: left;
+}
+
+/* Typing effect text */
+#typed-text2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: whitesmoke;
+    max-width: 90%;
+    text-align: left;
+    overflow: hidden;
+}
+
+/* Next Page Button */
+.next-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-button:hover {
+    background-color: #e63950;
+}
+
+/* Fullscreen background image */
+.background-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.full-screen-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the screen */
+}
+
+/* Centered 'I Love You' text */
+.love-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px 10px red;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
